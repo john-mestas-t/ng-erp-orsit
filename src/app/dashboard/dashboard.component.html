@@ -1,0 +1,23 @@
+<div class="dashboard">
+  <header class="top-bar">
+    <div class="logo">JMT-ERP</div>
+    <div class="search-bar">
+      <input type="text" placeholder="Search or type a command (Ctrl + S)">
+    </div>
+    <div class="user-info">
+      <span>by John Mestas</span>
+    </div>
+  </header>
+
+  <div class="menu-grid">
+    <div *ngFor="let item of menuItems" class="menu-item-container">
+      <a [href]="item.link"
+         target="_blank"
+         class="menu-item"
+         [style.background-color]="item.color">
+        <i class="material-icons">{{item.icon}}</i>
+      </a>
+      <span class="item-name">{{item.name}}</span>
+    </div>
+  </div>
+</div>

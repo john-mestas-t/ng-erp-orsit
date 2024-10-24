@@ -1,0 +1,80 @@
+.dashboard {
+  min-height: 100vh;
+  background-color: #4a4a8a;
+}
+
+.top-bar {
+  background: white;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.search-bar input {
+  padding: 0.5rem 1rem;
+  width: 300px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.menu-item-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  border-radius: 12px;
+  color: white;
+  text-decoration: none;
+  transition: transform 0.2s;
+}
+
+.menu-item:hover {
+  transform: translateY(-5px);
+}
+
+.material-icons {
+  font-size: 2rem;
+}
+
+.item-name {
+  font-size: 0.9rem;
+  color: white;
+  text-align: center;
+  margin-top: 0.25rem;
+}
+
+@media (max-width: 768px) {
+  .menu-grid {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .menu-item {
+    width: 60px;
+    height: 60px;
+  }
+
+  .material-icons {
+    font-size: 1.5rem;
+  }
+}
